@@ -1,0 +1,39 @@
+{% extends "template.html" %}
+{% block content %}
+<a href = "/">Go back to home page</a>
+    <h1>List of Aircraft</h1>
+    <h3>Type of plane {{planetype}}</h3>
+    <h3>Symbol {{symbol}}</h3>
+
+<img src="{{ url_for('static', filename = 'Symbols.JPG') }}" width="300" height="600">
+<p class="small">$A Small Single Prop C172 etc</p>
+<p class="small">$B Large single turbo prop PC12 TBM7 etc</p>
+<p class="small">$C Small Twin Prop</p>
+<p class="small">$D Large Twin Prop Islander etc</p>
+<p class="small">$E Small Biz Jet</p>
+<p class="small">$F Large Biz Jet</p>
+<p class="small">$G Glider U2 etc</p>
+<p class="small">$H Rear 2 Engine Jet CRJ9 E135 etc</p>
+<p class="small">$I Small 2 Engine Jet 737 etc</p>
+<p class="small">$J Large 2 Engine Jet 767 etc</p>
+<p class="small">$K Small 4 Engine Jet Airliner and some 2 engine types</p>
+<p class="small">$L Large 4 Engine Jet Airliner B747 A380 etc</p>
+<p class="small">$M large 2 engine prop DH8D AT76 etc</p>
+<p class="small">$N Large 4 engine prop Lanc P3 etc</p>
+<p class="small">$O Small Helicopter</p>
+<p class="small">$P Medium Helicopter</p>
+<p class="small">$Q Large Helicopter</p>
+<p class="small">$R Chinook</p>
+<p class="small">$S Large Transport 4 Prop C130 AN12 etc</p>
+<p class="small">$T Large Transport 4 Jet C17 C5 etc</p>
+<p class="small">$U Osprey</p>
+<p class="small">$V Small Mil Jet Trainer Hawk AlphaJet etc</p>
+<p class="small">$W Military Jet Delta Shape Eufi Tornado(wings back) etc</p>
+<p class="small">$X Military Jet F15 etc</p>
+<p class="small">$Y ULACS Handgliders etc</p>
+<p class="small">$Z A400</p>
+
+
+    <a href = "/">Go back to home page</a>
+      
+{% endblock %}

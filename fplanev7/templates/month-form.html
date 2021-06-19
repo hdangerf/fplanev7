@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% block content %}
+    <h1>Enter Month and year</h1>
+    <h2>e.g.  0315  </h2>
+    
+    <form action = "{{ url_for('mlister') }}" method = "POST">
+        <input type="text" name="text">
+        <input type="submit" name="getreg" value="Reg">
+        <input type="submit" name="getdate" value="Date">
+        <input type="submit" name="gettype" value="Type">
+        <input type="submit" name="getairline" value="Airline">
+    </form>
+<a href = "/">Go back to home page</a>
+{% endblock %}

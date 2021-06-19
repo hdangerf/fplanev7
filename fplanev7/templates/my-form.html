@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block content %}
+    <h1>Enter an aircraft registration</h1>
+    <h2>(it will be converted to uppercase)</h2>
+    <form action = "{{ url_for('lister') }}" method = "POST">
+        <input type="text" name="text">
+        <input type="submit" name="getreg" value="Reg">
+        <input type="submit" name="gettype" value="Type">
+        <input type="submit" name="getairline" value="Airline">
+    </form>
+<a href = "/">Go back to home page</a>
+{% endblock %}

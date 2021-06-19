@@ -1,0 +1,52 @@
+{% extends "template.html" %}
+{% block content %}
+
+<style>
+li {
+    list-style-type: none;
+}
+</style>
+
+    <h1>List of Aircraft</h1>
+    <h3>Number of planes {{rowslen}}</h3>
+    <a href = "/">Go back to home page</a>
+      <table border = 1>
+         <thead>
+            <td>Id</td>
+            <td>Reg</td>
+            <td>Type</td>
+            <td>Airline</td>
+            <td>Date</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               
+               <td><span style="font-weight:bold"><li onclick="window.open('/listid/{{row["id"]}}');">{{row["id"]}}</li></span></td> 
+               
+               <td><span style="font-weight:bold"><li onclick="window.open('/listone/{{row["reg"]}}');">{{row["reg"]}}</li></span></td> 
+               
+               <td><span style="font-weight:bold"><li onclick="window.open('/listtype/{{row["type"]}}');">{{row["type"]}}</li></span></td>
+                
+               <td><span style="font-weight:bold"><li onclick="window.open('/listairline/{{row["airline"]}}');">{{row["airline"]}}</li></span></td>
+                <td>{{row["date"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+<PRE>{{result}}</PRE>
+
+<a href = "http://www.google.pt/search?q={{rows[0]["reg"]}}&hl=en&tbm=isch&gws_rd=ssl">Photos {{rows[0]["reg"]}}</a>
+<p></p>
+<a href = "https://www.planelogger.com/Aircraft/Search?registration={{rows[0]["reg"]}}">Planelogger {{rows[0]["reg"]}}</a>
+<p></p>
+<a href = "http://www.airframes.org/reg/{{rows[0]["reg"]}}">Airframes {{rows[0]["reg"]}}</a>
+<p>If you need Airport location code</p>
+<a href = "http://www.iata.org/publications/Pages/code-search.aspx">Airport Location code</a>
+
+
+
+
+      
+{% endblock %}

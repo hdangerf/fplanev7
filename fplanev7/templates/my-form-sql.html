@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block content %}
+    <h1>Enter SQL Query</h1>
+    <p>sqlquery = ('SELECT * FROM planes WHERE '+ processed_text + ' ORDER BY reg')</p>
+    <h3> airline like 'ba' and type like 'a38%'</h3>
+    <h3> date like '%10/15'</h3>
+    <form action = "{{ url_for('sqlister') }}" method = "POST">
+        <input type="text" name="text" size="40">
+    </form>
+<p> NB:  ORDER by reg added automatically to the query</p>
+<a href = "/">Go back to home page</a>
+{% endblock %}

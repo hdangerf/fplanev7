@@ -1,0 +1,10 @@
+{% extends "template.html" %}
+{% block content %}
+    <h1>Enter an aircraft type</h1>
+    <h2>(it will be converted to uppercase)</h2>
+    <h4>Note: This now uses my own symbols database</h4>
+    <form action = "{{ url_for('symlist') }}" method = "POST">
+        <input type="text" name="text" size="40">
+    </form>
+<a href = "/">Go back to home page</a>
+{% endblock %}

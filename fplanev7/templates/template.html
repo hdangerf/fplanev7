@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>FplaneV6-Pi15</title>
+            <link rel="shortcut icon" href="{{ url_for('static', filename='PP_Symbols.ico') }}">
+            <style>
+p.small {
+    line-height: 30%;
+}
+
+p.big {
+    line-height: 200%;
+}
+</style>
+        </head>
+        <body>
+            <div class="container">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </body>
+    </html>
